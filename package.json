@@ -1,0 +1,23 @@
+{
+    "name": "js-testing",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "",
+        "test": "",
+        "lint": "eslint ."
+    },
+    "keywords": [],
+    "author": "Alejandro Cerezo",
+    "license": "ISC",
+    "prettier": {
+        "singleQuote": true
+    },
+    "devDependencies": {
+        "eslint": "^8.26.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0"
+    }
+}

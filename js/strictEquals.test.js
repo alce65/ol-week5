@@ -3,16 +3,16 @@ import {
     // strictEqualsMini,
     strictEqualsBasic,
     strictEqualsEstefania,
-    strictEqualsJavier,
-    strictEqualsMaria,
+    // strictEqualsJavier,
+    // strictEqualsMaria,
     strictEqualsAnaBelem,
-    strictEqualsMichael,
-    strictEqualsPatricia,
+    // strictEqualsMichael,
+    // strictEqualsPatricia,
     strictEqualsVictor,
-    strictEqualsMiguel,
+    // strictEqualsMiguel,
     strictEqualsCristian,
-    strictEqualsKick,
-    strictEqualsAlberto,
+    // strictEqualsKick,
+    // strictEqualsAlberto,
     strictEqualsAitor,
 } from './strictEquals.js';
 
@@ -75,25 +75,6 @@ describe('Given strictEqualsBasic function', () => {
     });
 });
 
-describe('Given strictEqualsJavier function', () => {
-    data.forEach((item) => {
-        test(`When arguments are ${item.label}
-            Then result should be ${item.result}`, () => {
-            const r = strictEqualsJavier(item.a, item.b);
-            expect(r).toBe(item.result);
-        });
-    });
-});
-
-describe('Given strictEqualsMaria function', () => {
-    data.forEach((item) => {
-        test(`When arguments are ${item.label}
-            Then result should be ${item.result}`, () => {
-            const r = strictEqualsMaria(item.a, item.b);
-            expect(r).toBe(item.result);
-        });
-    });
-});
 describe('Given strictEqualsEstefania function', () => {
     data.forEach((item) => {
         test(`When arguments are ${item.label}
@@ -114,26 +95,6 @@ describe('Given strictEqualsAnaBelem function', () => {
     });
 });
 
-describe('Given strictEqualsMichael function', () => {
-    data.forEach((item) => {
-        test(`When arguments are ${item.label}
-            Then result should be ${item.result}`, () => {
-            const r = strictEqualsMichael(item.a, item.b);
-            expect(r).toBe(item.result);
-        });
-    });
-});
-
-describe('Given strictEqualsPatricia function', () => {
-    data.forEach((item) => {
-        test(`When arguments are ${item.label}
-            Then result should be ${item.result}`, () => {
-            const r = strictEqualsPatricia(item.a, item.b);
-            expect(r).toBe(item.result);
-        });
-    });
-});
-
 describe('Given strictEqualsVictor function', () => {
     data.forEach((item) => {
         test(`When arguments are ${item.label}
@@ -144,41 +105,11 @@ describe('Given strictEqualsVictor function', () => {
     });
 });
 
-describe('Given strictEqualsMiguel function', () => {
-    data.forEach((item) => {
-        test(`When arguments are ${item.label}
-            Then result should be ${item.result}`, () => {
-            const r = strictEqualsMiguel(item.a, item.b);
-            expect(r).toBe(item.result);
-        });
-    });
-});
-
 describe('Given strictEqualsCristian function', () => {
     data.forEach((item) => {
         test(`When arguments are ${item.label}
             Then result should be ${item.result}`, () => {
             const r = strictEqualsCristian(item.a, item.b);
-            expect(r).toBe(item.result);
-        });
-    });
-});
-
-describe('Given strictEqualsKick function', () => {
-    data.forEach((item) => {
-        test(`When arguments are ${item.label}
-            Then result should be ${item.result}`, () => {
-            const r = strictEqualsKick(item.a, item.b);
-            expect(r).toBe(item.result);
-        });
-    });
-});
-
-describe('Given strictEqualsAlberto function', () => {
-    data.forEach((item) => {
-        test(`When arguments are ${item.label}
-            Then result should be ${item.result}`, () => {
-            const r = strictEqualsAlberto(item.a, item.b);
             expect(r).toBe(item.result);
         });
     });

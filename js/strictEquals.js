@@ -99,131 +99,131 @@ export function strictEqualsAitor(valor1, valor2) {
 }
 
 // Falla undefined v. undefined
-export function strictEqualsAlberto(a, b) {
-    if (isNaN(a) && isNaN(b)) {
-        return false;
-    }
-    if (!a && !b) {
-        return true;
-    }
-    if (Object.is(a, b)) {
-        return true;
-    }
-    return false;
-}
+// export function strictEqualsAlberto(a, b) {
+//     if (isNaN(a) && isNaN(b)) {
+//         return false;
+//     }
+//     if (!a && !b) {
+//         return true;
+//     }
+//     if (Object.is(a, b)) {
+//         return true;
+//     }
+//     return false;
+// }
 
 // Falla -0 === 1 && 1 === -0
-export function strictEqualsJavier(a, b) {
-    const result = Object.is(a, b);
-    if (Number.isNaN(a) && Number.isNaN(b)) {
-        return !result;
-    }
-    if (Object.is(-Infinity, 1 / a) || Object.is(-Infinity, 1 / b)) {
-        return !result;
-    }
-    return result;
-}
+// export function strictEqualsJavier(a, b) {
+//     const result = Object.is(a, b);
+//     if (Number.isNaN(a) && Number.isNaN(b)) {
+//         return !result;
+//     }
+//     if (Object.is(-Infinity, 1 / a) || Object.is(-Infinity, 1 / b)) {
+//         return !result;
+//     }
+//     return result;
+// }
 
 // Falla 0 === 0
-export const strictEqualsMaria = (a, b) => {
-    let valueA = a;
-    const valueB = b;
-    // Por defecto, la función Object.is() devuelve TRUE cuando se trata de NaN
-    if (Number.isNaN(a)) {
-        // Para lograr que NaN devuelva FALSE usando la función Object.is(), isNaN devuelve TRUE, lo convierto en string.
-        valueA = a.toString();
+// export const strictEqualsMaria = (a, b) => {
+//     let valueA = a;
+//     const valueB = b;
+//     // Por defecto, la función Object.is() devuelve TRUE cuando se trata de NaN
+//     if (Number.isNaN(a)) {
+//         // Para lograr que NaN devuelva FALSE usando la función Object.is(), isNaN devuelve TRUE, lo convierto en string.
+//         valueA = a.toString();
 
-        // Por defecto, la función Object.is() devuelve FALSE cuando se trata de comparar 0 positivo y negativo
-    } else if (Number.isInteger(a) && a < 1) {
-        // Para solventarlo, si 'a' es un número y es menor que 1, le doi valor negativo para que siempre sea un negativo con negativo que resulte positivo o que dé a ambos el negativo
-        valueA = -a;
-    }
+//         // Por defecto, la función Object.is() devuelve FALSE cuando se trata de comparar 0 positivo y negativo
+//     } else if (Number.isInteger(a) && a < 1) {
+//         // Para solventarlo, si 'a' es un número y es menor que 1, le doi valor negativo para que siempre sea un negativo con negativo que resulte positivo o que dé a ambos el negativo
+//         valueA = -a;
+//     }
 
-    const result = Object.is(valueA, valueB);
-    return result;
-};
-
-// Falla 0 === 0
-export const strictEqualsPatricia = (a, b) => {
-    let valueA = a;
-    const valueB = b;
-    // Por defecto, la función Object.is() devuelve TRUE cuando se trata de NaN
-    if (Number.isNaN(a)) {
-        // Para lograr que NaN devuelva FALSE usando la función Object.is(), isNaN devuelve TRUE, lo convierto en string.
-        valueA = a.toString();
-
-        // Por defecto, la función Object.is() devuelve FALSE cuando se trata de comparar 0 positivo y negativo
-    } else if (Number.isInteger(a) && a < 1) {
-        // Para solventarlo, si 'a' es un número y es menor que 1, le doi valor negativo para que siempre sea un negativo con negativo que resulte positivo o que dé a ambos el negativo
-        valueA = -a;
-    }
-
-    const result = Object.is(valueA, valueB);
-    return result;
-};
+//     const result = Object.is(valueA, valueB);
+//     return result;
+// };
 
 // Falla 0 === 0
-export function strictEqualsMichael(a, b) {
-    const exceptionNaN = [NaN];
-    const exception0 = [0];
-    const exceptionNEgative0 = [-0];
-    if (exceptionNaN.includes(a) && exceptionNaN.includes(b)) {
-        return !Object.is(a, b);
-    }
+// export const strictEqualsPatricia = (a, b) => {
+//     let valueA = a;
+//     const valueB = b;
+//     // Por defecto, la función Object.is() devuelve TRUE cuando se trata de NaN
+//     if (Number.isNaN(a)) {
+//         // Para lograr que NaN devuelva FALSE usando la función Object.is(), isNaN devuelve TRUE, lo convierto en string.
+//         valueA = a.toString();
 
-    if (exception0.includes(a) && exceptionNEgative0.includes(b)) {
-        return !Object.is(a, b);
-    }
+//         // Por defecto, la función Object.is() devuelve FALSE cuando se trata de comparar 0 positivo y negativo
+//     } else if (Number.isInteger(a) && a < 1) {
+//         // Para solventarlo, si 'a' es un número y es menor que 1, le doi valor negativo para que siempre sea un negativo con negativo que resulte positivo o que dé a ambos el negativo
+//         valueA = -a;
+//     }
 
-    if (exceptionNEgative0.includes(a) && exception0.includes(b)) {
-        return !Object.is(a, b);
-    }
-    return Object.is(a, b);
-}
+//     const result = Object.is(valueA, valueB);
+//     return result;
+// };
 
 // Falla 0 === 0
-export const strictEqualsMiguel = (a, b) => {
-    const result = Object.is(a, b);
+// export function strictEqualsMichael(a, b) {
+//     const exceptionNaN = [NaN];
+//     const exception0 = [0];
+//     const exceptionNEgative0 = [-0];
+//     if (exceptionNaN.includes(a) && exceptionNaN.includes(b)) {
+//         return !Object.is(a, b);
+//     }
 
-    if (Number.isNaN(a) && Number.isNaN(b)) {
-        return !result;
-    }
+//     if (exception0.includes(a) && exceptionNEgative0.includes(b)) {
+//         return !Object.is(a, b);
+//     }
 
-    // CHECK BOTH FALSYS
-    if (!a && !b) {
-        // DISCARD "" VS "" case
-        if (String(a).length <= 0 && String(b).length <= 0) {
-            return result;
-        }
-        // DISCARD BOTH ARE TYPE BOOLEAN VALUE FALSE
-        if (!(String(a).length > 1 && String(b).length > 1)) {
-            return !result;
-        }
+//     if (exceptionNEgative0.includes(a) && exception0.includes(b)) {
+//         return !Object.is(a, b);
+//     }
+//     return Object.is(a, b);
+// }
 
-        return result;
-    }
+// Falla 0 === 0
+// export const strictEqualsMiguel = (a, b) => {
+//     const result = Object.is(a, b);
 
-    return result;
-};
+//     if (Number.isNaN(a) && Number.isNaN(b)) {
+//         return !result;
+//     }
+
+//     // CHECK BOTH FALSYS
+//     if (!a && !b) {
+//         // DISCARD "" VS "" case
+//         if (String(a).length <= 0 && String(b).length <= 0) {
+//             return result;
+//         }
+//         // DISCARD BOTH ARE TYPE BOOLEAN VALUE FALSE
+//         if (!(String(a).length > 1 && String(b).length > 1)) {
+//             return !result;
+//         }
+
+//         return result;
+//     }
+
+//     return result;
+// };
 
 // Falla en 3 casos: -0 v. 1, 1 v. -0, 0 v.. 1
-export function strictEqualsKick(a, b) {
-    if (Object.is(a, b)) {
-        if (Number.isNaN(a) || Number.isNaN(b)) {
-            return false;
-        }
-        return true;
-    }
-    if (
-        Object.is(a, -0) ||
-        Object.is(a, 0) ||
-        Object.is(0, b) ||
-        Object.is(-0, b)
-    ) {
-        return true;
-    }
-    return false;
-}
+// export function strictEqualsKick(a, b) {
+//     if (Object.is(a, b)) {
+//         if (Number.isNaN(a) || Number.isNaN(b)) {
+//             return false;
+//         }
+//         return true;
+//     }
+//     if (
+//         Object.is(a, -0) ||
+//         Object.is(a, 0) ||
+//         Object.is(0, b) ||
+//         Object.is(-0, b)
+//     ) {
+//         return true;
+//     }
+//     return false;
+// }
 
 // Falla la mayoría
 // export const strictEqualsOmar = (a, b) => {

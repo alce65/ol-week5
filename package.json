@@ -17,6 +17,7 @@
     },
     "devDependencies": {
         "@babel/plugin-transform-modules-commonjs": "^7.19.6",
+        "@types/jest": "^29.2.1",
         "eslint": "^8.26.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-import": "^2.26.0",
@@ -30,8 +31,5 @@
                 ]
             }
         }
-    },
-    "dependencies": {
-        "@types/jest": "^29.2.1"
     }
 }

@@ -25,10 +25,10 @@ package.json
 .eslintrc.json
 
 ```json
- "env": {
+    "env": {
 
-        "jest": true
-    },
+            "jest": true
+        },
 ```
 
 ### Elementos
@@ -86,8 +86,28 @@ Módulos. Elementos exportados o no
 
 ### Github Actions
 
-### SonarCloud
+-   Conceptos: CI/CD
+-   Ejemplo: audit
+
+    -   ECLint: comprobación del uso de .editorConfig
 
 ## Día 3
 
+### Github Actions (Review)
+
+### SonarCloud
+
 ### Repaso modelos mentales
+
+-   Tipos de valores (II).
+    -   Objetos y funciones (Repaso). Llamadas a funciones. IIFE.
+    -   Strings.
+-   Propiedades
+
+### Objetos nativos.
+
+String Wrapper.
+Arrays.
+Métodos funcionales de orden superior.
+Ejemplo de push como función
+Array Methods testeados (JS)
